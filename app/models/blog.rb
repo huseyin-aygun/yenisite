@@ -1,3 +1,4 @@
 class Blog < ApplicationRecord
-	#asdasd
+   extend FriendlyId
+	friendly_id :title, use: :slugged
 end
