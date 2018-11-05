@@ -70,3 +70,12 @@ end
 
 puts "9 adet portfolio post olustu"
 
+3.times do |technology|
+	Portfolio.last.technologies.create!(
+		name: "Techology #{technology}"
+		 
+		)
+
+end
+puts "9 adet techology   olustu"
+
