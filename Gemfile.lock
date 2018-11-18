@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/huseyin-aygun/huseyin_aygun_tool
+  revision: 8938e8f6ea169670e74e851d093ce0d85620c81a
+  specs:
+    huseyin_aygun_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -207,6 +213,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise (~> 4.5)
   friendly_id (~> 5.1.0)
+  huseyin_aygun_tool!
   jbuilder (~> 2.5)
   jquery-rails (~> 4.3, >= 4.3.3)
   listen (>= 3.0.5, < 3.2)

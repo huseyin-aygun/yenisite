@@ -14,4 +14,7 @@ module ApplicationHelper
       		content_tag(:p, greeting, class: "source-greeting")    
       	end  
 	end
+	def copyright_generator
+		HuseyinAygunTool::Renderer.copyright 'Hüseyin Aygün', 'All rights reserved'
+	end
 end
