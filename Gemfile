@@ -60,4 +60,6 @@ gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'huseyin_aygun_tool', '~> 0.1.1'
 gem 'petergate', '~> 2.0', '>= 2.0.1'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
+gem 'kaminari', '~> 1.1', '>= 1.1.1'
 
