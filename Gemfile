@@ -17,8 +17,10 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'mini_racer', platforms: :ruby
 
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2'
+gem 'coffee-rails', '~> 4.1', '>= 4.1.1'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
@@ -53,14 +55,13 @@ end
 
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'jquery', '~> 0.0.1'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'friendly_id', '~> 5.1.0'
 gem 'devise', '~> 4.5'
 gem 'bootstrap', '~> 4.1.3' 
-gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'huseyin_aygun_tool', '~> 0.1.1'
 gem 'petergate', '~> 2.0', '>= 2.0.1'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
+gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 
