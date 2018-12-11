@@ -1,3 +1,12 @@
+
+/*
+ * HTML5Sortable package
+ * https://github.com/lukasoppermann/html5sortable
+ *
+ * Maintained by Lukas Oppermann <lukas@vea.re>
+ *
+ * Released under the MIT license.
+ */
 var sortable = (function () {
     'use strict';
 
@@ -744,7 +753,23 @@ var sortable = (function () {
     function sortable(sortableElements, options) {
         // get method string to see if a method is called
         var method = String(options);
-        options = options || {};
+        // merge user options with defaultss
+        options = Object.assign({
+            connectWith: null,
+            acceptFrom: null,
+            copy: false,
+            placeholder: null,
+            disableIEFix: null,
+            placeholderClass: 'sortable-placeholder',
+            draggingClass: 'sortable-dragging',
+            hoverClass: false,
+            debounce: 0,
+            maxItems: 0,
+            itemSerializer: undefined,
+            containerSerializer: undefined,
+            customDragImage: null,
+            items: null
+        }, (typeof options === 'object') ? options : {});
         // check if the user provided a selector instead of an element
         if (typeof sortableElements === 'string') {
             sortableElements = document.querySelectorAll(sortableElements);
@@ -771,10 +796,11 @@ var sortable = (function () {
                 }
             });
             // merge options with default options
-            options = Object.assign({}, defaultConfiguration, store(sortableElement).config, options);
+            options = Object.assign({}, defaultConfiguration, options);
             // init data store for sortable
             store(sortableElement).config = options;
-            // set options on sortable
+            // get options & set options on sortable
+            options = addData(sortableElement, 'opts') || options;
             addData(sortableElement, 'opts', options);
             // property to define as sortable
             sortableElement.isSortable = true;
@@ -1067,3 +1093,4 @@ var sortable = (function () {
     return sortable;
 
 }());
+ 
