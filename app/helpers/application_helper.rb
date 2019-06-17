@@ -1,11 +1,11 @@
 module ApplicationHelper
 	def login_helper style = ''
 	     if current_user.is_a?(GuestUser)  
-	         (link_to "Register", new_user_registration_path, class: style) +  
+	         (link_to "Kayıt ol", new_user_registration_path, class: style) +  
 	         " ".html_safe +
-	         (link_to "Login", new_user_session_path, class: style) 	     	
+	         (link_to "Giriş", new_user_session_path, class: style) 	     	
 	      else 
-	        link_to "Logout", destroy_user_session_path, method: :delete, class: style    
+	        link_to "Otorumu Kapat", destroy_user_session_path, method: :delete, class: style    
 	      end  
 	end
 	def source_helper(layout_name)
@@ -21,15 +21,15 @@ module ApplicationHelper
 		[
 			{
 				url: root_path,
-				title: 'Home'
+				title: 'Ana Sayfa'
 			},
 			{
 				url: about_me_path,
-				title: 'About Me'
+				title: 'Hakkımızda'
 			},
 			{
 				url: contact_path,
-				title: 'Contact'
+				title: 'İletişim'
 			},
 			{
 				url: blogs_path,
@@ -37,7 +37,7 @@ module ApplicationHelper
 			},
 			{
 				url: portfolios_path,
-				title: 'Portfolio'
+				title: 'Referanslar'
 			}												
 		]
 
